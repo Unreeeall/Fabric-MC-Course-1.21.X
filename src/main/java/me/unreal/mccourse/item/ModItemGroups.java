@@ -1,6 +1,7 @@
 package me.unreal.mccourse.item;
 
 import me.unreal.mccourse.MCCourseMod;
+import me.unreal.mccourse.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -24,8 +25,12 @@ public class ModItemGroups {
     public static final ItemGroup FLUORITE_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(MCCourseMod.MOD_ID, "fluorite_blocks"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.fluorite_blocks"))
-                    .icon(()-> new ItemStack(Blocks.BAMBOO.asItem())).entries((displayContext, entries) -> {
-                        entries.add(Blocks.BAMBOO);
+                    .icon(()-> new ItemStack(ModBlocks.FLUORITE_BLOCK)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.FLUORITE_BLOCK);
+                        entries.add(ModBlocks.FLUORITE_ORE);
+                        entries.add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+                        entries.add(ModBlocks.FLUORITE_END_ORE);
+                        entries.add(ModBlocks.FLUORITE_NETHER_ORE);
                     }).build()
     );
 

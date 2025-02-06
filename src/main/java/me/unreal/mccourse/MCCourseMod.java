@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static me.unreal.mccourse.block.ModBlocks.registerModBlocks;
 import static me.unreal.mccourse.item.ModItemGroups.registerItemGroups;
 import static me.unreal.mccourse.item.ModItems.registerModItems;
 
@@ -23,6 +24,7 @@ public class MCCourseMod implements ModInitializer {
 
 		registerModItems();
 		registerItemGroups();
+		registerModBlocks();
 
 
 		LOGGER.info("Hello Fabric world!");
