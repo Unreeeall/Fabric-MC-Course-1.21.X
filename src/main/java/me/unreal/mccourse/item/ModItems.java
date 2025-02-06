@@ -1,6 +1,6 @@
-package me.unreal.item;
+package me.unreal.mccourse.item;
 
-import me.unreal.MCCourseMod;
+import me.unreal.mccourse.MCCourseMod;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;

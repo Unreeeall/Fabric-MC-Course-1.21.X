@@ -1,4 +1,4 @@
-package me.unreal.mixin;
+package me.unreal.mccourse.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
