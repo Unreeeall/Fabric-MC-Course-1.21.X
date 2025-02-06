@@ -1,4 +1,4 @@
-package me.unreal.mccourse;
+package me.unreal;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

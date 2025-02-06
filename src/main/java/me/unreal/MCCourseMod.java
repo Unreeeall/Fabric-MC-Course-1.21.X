@@ -1,10 +1,10 @@
-package me.unreal.mccourse;
+package me.unreal;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static me.unreal.mccourse.item.ModItems.registerModItems;
+import static me.unreal.item.ModItems.registerModItems;
 
 public class MCCourseMod implements ModInitializer {
 	public static final String MOD_ID = "mccourse";

@@ -1,4 +1,4 @@
-package me.unreal.mccourse;
+package me.unreal;
 
 import net.fabricmc.api.ClientModInitializer;
 
