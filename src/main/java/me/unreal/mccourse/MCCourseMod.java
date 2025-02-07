@@ -1,6 +1,8 @@
 package me.unreal.mccourse;
 
+import me.unreal.mccourse.item.ModItems;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +27,8 @@ public class MCCourseMod implements ModInitializer {
 		registerModItems();
 		registerItemGroups();
 		registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
 
 		LOGGER.info("Hello Fabric world!");
