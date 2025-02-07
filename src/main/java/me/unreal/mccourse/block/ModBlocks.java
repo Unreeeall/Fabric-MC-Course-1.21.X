@@ -1,6 +1,7 @@
 package me.unreal.mccourse.block;
 
 import me.unreal.mccourse.MCCourseMod;
+import me.unreal.mccourse.block.custom.MagicBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -48,6 +49,24 @@ public class ModBlocks {
                             .strength(3f)
                             .requiresTool()
             ));
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .requiresTool()
+            ));
+
+
+
+
+
+
+
+
+
+
+
+
 
     private static Block registerBlock(String name, Block block) {
         registerBLockItem(name, block);
