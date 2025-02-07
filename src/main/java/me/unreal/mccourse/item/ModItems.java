@@ -17,6 +17,8 @@ public class ModItems {
 
     public static final Item CHAINSAW = registerItem("chainsaw", new ChainsawItem(new Item.Settings().maxDamage(32)));
 
+    public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);
     }
