@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    "SFS",
-    "SFS",
-    "SFS"
+    "SSS",
+    "FFF",
+    "SSS"
   ],
   "result": {
     "count": 1,

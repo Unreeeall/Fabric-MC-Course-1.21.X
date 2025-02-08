@@ -1,4 +1,4 @@
-// 1.21	2025-02-08T13:43:03.2450292	MC Course Mod/Recipes
+// 1.21	2025-02-08T13:50:05.6303095	MC Course Mod/Recipes
 4b89c77f0475d793b886d37628a3c44ee9435efd data\mccourse\advancement\recipes\misc\fluorite_from_blasting_raw_fluorite.json
 5b0fd6f4393d75023472ce1d665166947e43efa7 data\mccourse\recipe\fluorite_from_blasting_fluorite_end_ore.json
 b0292cb6ae5d64109f41a6bab9dc51a54af7a12d data\mccourse\advancement\recipes\misc\fluorite_from_smelting_fluorite_nether_ore.json
@@ -22,6 +22,8 @@ d6dc72beeed3e54882b08ae10ae2fb9aebe5c785 data\mccourse\advancement\recipes\misc\
 d7d90f51256b1b1ca81c0ac0ec698fbcc1dad4b1 data\mccourse\recipe\fluorite_from_blasting_raw_fluorite.json
 b082a293a3f38b7fef8df2da18027ad524a6386c data\mccourse\advancement\recipes\misc\fluorite_from_blasting_fluorite_end_ore.json
 cea0a6572e4c40029b462277ef18acecba380e08 data\mccourse\recipe\fluorite_from_smelting_fluorite_ore.json
+fd4440654281429fc693108edb675b02b4a78530 data\mccourse\advancement\recipes\misc\raw_fluorite_2.json
 24631eef44e67ff096021e7396118a05247785d1 data\mccourse\recipe\fluorite_from_smelting_fluorite_end_ore.json
-6949145e80ce48855c47da1503a23d45abc796d2 data\mccourse\recipe\raw_fluorite.json
+8884256bac1f4c96300d7fa90bd5b6990a16f230 data\mccourse\recipe\raw_fluorite.json
+c309eb5c4e76b4c1f155e0683f863172b852587d data\mccourse\recipe\raw_fluorite_2.json
 65a80636bce66d9a5159a3a3b695409041ce4d19 data\mccourse\recipe\fluorite_from_blasting_fluorite_nether_ore.json

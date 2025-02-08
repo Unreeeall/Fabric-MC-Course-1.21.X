@@ -1,5 +1,6 @@
 package me.unreal.mccourse.datagen;
 
+import me.unreal.mccourse.MCCourseMod;
 import me.unreal.mccourse.block.ModBlocks;
 import me.unreal.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -10,6 +11,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -34,13 +36,23 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.FLUORITE, RecipeCategory.DECORATIONS, ModBlocks.FLUORITE_BLOCK);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_FLUORITE)
-                .pattern("SSS")
                 .pattern("SFS")
-                .pattern("SSS")
+                .pattern("SFS")
+                .pattern("SFS")
                 .input('S', Blocks.STONE)
                 .input('F', ModBlocks.FLUORITE_BLOCK)
                 .criterion(hasItem(Blocks.STONE), conditionsFromItem(Blocks.STONE))
                 .criterion(hasItem(ModBlocks.FLUORITE_BLOCK), conditionsFromItem(ModBlocks.FLUORITE_BLOCK))
                 .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_FLUORITE)
+                .pattern("SSS")
+                .pattern("FFF")
+                .pattern("SSS")
+                .input('S', Blocks.STONE)
+                .input('F', ModBlocks.FLUORITE_BLOCK)
+                .criterion(hasItem(Blocks.STONE), conditionsFromItem(Blocks.STONE))
+                .criterion(hasItem(ModBlocks.FLUORITE_BLOCK), conditionsFromItem(ModBlocks.FLUORITE_BLOCK))
+                .offerTo(recipeExporter, Identifier.of(MCCourseMod.MOD_ID, "raw_fluorite_2"));
     }
 }
