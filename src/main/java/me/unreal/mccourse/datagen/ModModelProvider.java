@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -31,6 +30,9 @@ public class ModModelProvider extends FabricModelProvider {
         fluoriteTexturePool.fence(ModBlocks.FLUORITE_FENCE);
         fluoriteTexturePool.fenceGate(ModBlocks.FLUORITE_FENCE_GATE);
         fluoriteTexturePool.wall(ModBlocks.FLUORITE_WALL);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.FLUORITE_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.FLUORITE_TRAPDOOR);
     }
 
     @Override

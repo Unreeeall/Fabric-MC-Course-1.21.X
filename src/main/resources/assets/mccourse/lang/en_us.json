@@ -13,6 +13,8 @@
   "block.mccourse.fluorite_fence": "Fluorite Fence",
   "block.mccourse.fluorite_fence_gate": "Fluorite Fence Gate",
   "block.mccourse.fluorite_wall": "Fluorite Wall",
+  "block.mccourse.fluorite_door": "Fluorite Door",
+  "block.mccourse.fluorite_trapdoor": "Fluorite Trapdoor",
   "block.mccourse.fluorite_ore": "Fluorite Ore",
   "block.mccourse.fluorite_deepslate_ore": "Fluorite Deepslate Ore",
   "block.mccourse.fluorite_end_ore": "Fluorite End Ore",

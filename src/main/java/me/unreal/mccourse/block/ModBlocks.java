@@ -91,6 +91,18 @@ public class ModBlocks {
                     .requiresTool()
             ));
 
+    public static final Block FLUORITE_DOOR = registerBlock("fluorite_door",
+            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .requiresTool()
+                    .nonOpaque()
+            ));
+
+    public static final Block FLUORITE_TRAPDOOR = registerBlock("fluorite_trapdoor",
+            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .requiresTool()
+                    .nonOpaque()
+            ));
+
 
 
 
