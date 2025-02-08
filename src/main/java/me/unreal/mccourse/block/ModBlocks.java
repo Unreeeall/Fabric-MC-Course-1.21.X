@@ -66,6 +66,16 @@ public class ModBlocks {
                     .requiresTool()
             ));
 
+    public static final Block FLUORITE_BUTTON = registerBlock("fluorite_button",
+            new ButtonBlock(BlockSetType.IRON, 2, AbstractBlock.Settings.create()
+                    .requiresTool()
+            ));
+
+    public static final Block FLUORITE_PRESSURE_PLATE = registerBlock("fluorite_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .requiresTool()
+            ));
+
 
 
 

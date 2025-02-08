@@ -37,6 +37,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MAGIC_BLOCK);
                         entries.add(ModBlocks.FLUORITE_STAIRS);
                         entries.add(ModBlocks.FLUORITE_SLAB);
+                        entries.add(ModBlocks.FLUORITE_BUTTON);
+                        entries.add(ModBlocks.FLUORITE_PRESSURE_PLATE);
                     }).build()
     );
 
