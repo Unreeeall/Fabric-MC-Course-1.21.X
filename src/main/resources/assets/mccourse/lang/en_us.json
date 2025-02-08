@@ -13,5 +13,12 @@
   "block.mccourse.magic_block": "Magic Block",
 
   "itemgroup.fluorite": "Flourite Items",
-  "itemgroup.fluorite_blocks": "Flourite Blocks"
+  "itemgroup.fluorite_blocks": "Flourite Blocks",
+
+
+  "tooltip.mccourse.chainsaw.tooltip.shift": "Press §eShift§r for more Information!",
+  "tooltip.mccourse.chainsaw.tooltip.1": "This is da Tree Choppa 9000!",
+  "tooltip.mccourse.chainsaw.tooltip.2": "§oMake tree go gone!§r",
+  "tooltip.mccourse.magic_block.tooltip.1": "§9MAGIC!!§r",
+  "tooltip.mccourse.strawberry.tooltip.1": "Yummy!!!"
 }
