@@ -1,4 +1,4 @@
-// 1.21	2025-02-09T11:33:38.4089645	MC Course Mod/Model Definitions
+// 1.21	2025-02-09T11:43:09.7298976	MC Course Mod/Model Definitions
 06c504730d503582befa4c61d7eff545ab48eb88 assets\mccourse\models\item\fluorite_leggings_copper_trim.json
 4cb884f732da5e08c21211f771318b34440b09c6 assets\mccourse\models\block\fluorite_door_top_left_open.json
 84d4577e7b636ea9e6a2b6bb513e557d4051a32b assets\mccourse\models\block\fluorite_stairs_outer.json
@@ -90,6 +90,7 @@ f9b91dcd506a1166fcbbe75419bafcda264de3d0 assets\mccourse\models\item\fluorite_en
 4d3289c10cdcdfff9327db225949a134a9b73498 assets\mccourse\blockstates\fluorite_stairs.json
 267d38964ba6385ef28dfd17bb6782ae9ea7c6eb assets\mccourse\models\item\fluorite_chestplate_gold_trim.json
 a1d613b80612cda62368f66ec5cc7fc8a0b6bea8 assets\mccourse\models\block\fluorite_fence_gate_wall_open.json
+e85e337e0ff0a90f4b7a77d7963b9910a1c1d3c2 assets\mccourse\models\item\fluorite_horse_armor.json
 aa57f7c390bd95aaaf73b8e318d904f5c8770999 assets\mccourse\models\item\fluorite_boots_redstone_trim.json
 ac70670dfc537d80c5f88d171152c785130576a2 assets\mccourse\models\item\fluorite_helmet_gold_trim.json
 d6b49d4ab6d8ab08c5375a314f2badc2156cb25b assets\mccourse\models\item\fluorite_pressure_plate.json
