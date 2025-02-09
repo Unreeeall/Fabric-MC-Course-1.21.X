@@ -1,10 +1,7 @@
 package me.unreal.mccourse.item;
 
 import me.unreal.mccourse.MCCourseMod;
-import me.unreal.mccourse.item.custom.ChainsawItem;
-import me.unreal.mccourse.item.custom.HammerItem;
-import me.unreal.mccourse.item.custom.ModEffectSwordItem;
-import me.unreal.mccourse.item.custom.PaxelItem;
+import me.unreal.mccourse.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.effect.StatusEffect;
@@ -63,7 +60,7 @@ public class ModItems {
     public static final Item FLUORITE_HELMET = registerItem("fluorite_helmet", new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
             new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
 
-    public static final Item FLUORITE_CHESTPLATE = registerItem("fluorite_chestplate", new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+    public static final Item FLUORITE_CHESTPLATE = registerItem("fluorite_chestplate", new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
             new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
 
     public static final Item FLUORITE_LEGGINGS = registerItem("fluorite_leggings", new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
