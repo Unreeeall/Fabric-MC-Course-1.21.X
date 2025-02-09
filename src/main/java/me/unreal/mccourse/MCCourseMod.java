@@ -1,7 +1,9 @@
 package me.unreal.mccourse;
 
 import me.unreal.mccourse.item.ModItems;
+import me.unreal.mccourse.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +32,7 @@ public class MCCourseMod implements ModInitializer {
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
-
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 		LOGGER.info("Hello Fabric world!");
 	}
 }
