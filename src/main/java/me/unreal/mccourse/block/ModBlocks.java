@@ -1,6 +1,7 @@
 package me.unreal.mccourse.block;
 
 import me.unreal.mccourse.MCCourseMod;
+import me.unreal.mccourse.block.custom.FluoriteLampBlock;
 import me.unreal.mccourse.block.custom.MagicBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -101,6 +102,11 @@ public class ModBlocks {
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
                     .requiresTool()
                     .nonOpaque()
+            ));
+
+    public static final Block FLUORITE_LAMP = registerBlock("fluorite_lamp",
+            new FluoriteLampBlock(AbstractBlock.Settings.create()
+                    .strength(2f).luminance(state ->state.get(FluoriteLampBlock.CLICKED) ? 15 : 0)
             ));
 
 
