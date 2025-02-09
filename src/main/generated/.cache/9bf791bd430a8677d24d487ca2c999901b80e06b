@@ -1,4 +1,4 @@
-// 1.21	2025-02-09T11:43:09.7354162	MC Course Mod/Tags for minecraft:block
+// 1.21	2025-02-09T13:21:48.1089584	MC Course Mod/Tags for minecraft:block
 fff4f8dcb2118c8d1e54b5ebb2359296399e6d31 data\minecraft\tags\block\needs_diamond_tool.json
 dc1b4409beff154ab683281af6c24167fc0ed0e7 data\minecraft\tags\block\walls.json
 3b5e031adf385966d61e78703b5a67afeaa79e1c data\minecraft\tags\block\incorrect_for_netherite_tool.json
@@ -8,8 +8,8 @@ f7195f176d8f383d5dafa778fccf8c74db194eac data\minecraft\tags\block\fence_gates.j
 38ea968a9d1d05e80480cb9e4851d2082a2164c5 data\minecraft\tags\block\mineable\pickaxe.json
 3b5e031adf385966d61e78703b5a67afeaa79e1c data\minecraft\tags\block\incorrect_for_wooden_tool.json
 470bec0afd29fe43bf1667ea283e1706164ea4be data\minecraft\tags\block\fences.json
-3b5e031adf385966d61e78703b5a67afeaa79e1c data\minecraft\tags\block\incorrect_for_gold_tool.json
 3b5e031adf385966d61e78703b5a67afeaa79e1c data\minecraft\tags\block\incorrect_for_diamond_tool.json
+3b5e031adf385966d61e78703b5a67afeaa79e1c data\minecraft\tags\block\incorrect_for_gold_tool.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data\mccourse\tags\block\paxel_mineable.json
 b67cd49cd7776098ff70a088387c3efb54f3ac90 data\mccourse\tags\block\needs_fluorite_tool.json
 410a352cd2ed1abbb0052a2e79ac226acb31adac data\minecraft\tags\block\needs_iron_tool.json

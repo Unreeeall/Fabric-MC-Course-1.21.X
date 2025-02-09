@@ -16,6 +16,7 @@
   "item.mccourse.fluorite_leggings": "Fluorite Leggings",
   "item.mccourse.fluorite_boots": "Fluorite Boots",
   "item.mccourse.fluorite_horse_armor": "Fluorite Horse Armor",
+  "item.mccourse.kaupen_armor_trim_smithing_template": "Kaupen Smithing Template",
 
 
 
@@ -37,6 +38,9 @@
 
   "itemgroup.fluorite": "Flourite Items",
   "itemgroup.fluorite_blocks": "Flourite Blocks",
+
+  "trim_material.mccourse.fluorite": "Fluorite Material",
+  "trim_pattern.mccourse.kaupen": "Kaupen Armor Pattern",
 
 
   "tooltip.mccourse.chainsaw.tooltip.shift": "Press §eShift§r for more Information!",
