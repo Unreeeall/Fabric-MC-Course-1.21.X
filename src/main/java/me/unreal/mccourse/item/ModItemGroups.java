@@ -37,6 +37,7 @@ public class ModItemGroups {
                         entries.add(ModItems.KAUPEN_SMITHING_TEMPLATE);
                         entries.add(ModItems.METAL_DETECTOR);
                         entries.add(ModItems.DATA_TABLET);
+                        entries.add(ModItems.KAUPEN_BOW);
                     }).build()
     );
 

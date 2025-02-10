@@ -83,6 +83,8 @@ public class ModItems {
     public static final Item DATA_TABLET = registerItem("data_tablet",
             new DataTabletItem(new Item.Settings().maxCount(1)));
 
+    public static final Item KAUPEN_BOW = registerItem("kaupen_bow",
+            new BowItem(new Item.Settings().maxDamage(200)));
 
 
 
