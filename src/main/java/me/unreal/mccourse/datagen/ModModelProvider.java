@@ -67,6 +67,5 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.KAUPEN_SMITHING_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.METAL_DETECTOR, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DATA_TABLET, Models.GENERATED);
     }
 }
