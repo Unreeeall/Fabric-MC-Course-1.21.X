@@ -1,4 +1,4 @@
-// 1.21	2025-02-09T18:15:47.3485065	MC Course Mod/Model Definitions
+// 1.21	2025-02-10T17:06:34.4943399	MC Course Mod/Model Definitions
 06c504730d503582befa4c61d7eff545ab48eb88 assets\mccourse\models\item\fluorite_leggings_copper_trim.json
 4cb884f732da5e08c21211f771318b34440b09c6 assets\mccourse\models\block\fluorite_door_top_left_open.json
 84d4577e7b636ea9e6a2b6bb513e557d4051a32b assets\mccourse\models\block\fluorite_stairs_outer.json
@@ -15,6 +15,7 @@ e64f2617cc93e77f8689d545bac91576ff0a40b5 assets\mccourse\models\item\fluorite_he
 34ce4e294d5bcd164c138e01f78c976a55eec6bb assets\mccourse\models\item\fluorite_leggings_emerald_trim.json
 c9c009bbd53cde66b755d284aa86ec0cab4efa36 assets\mccourse\models\item\fluorite_helmet_redstone_trim.json
 7bcf323d8fa3ddc9811830ab4c43c3b4bd81002b assets\mccourse\models\block\fluorite_pressure_plate.json
+eac3449dd2f9df65a33456b5098c130c1e050c03 assets\mccourse\models\item\data_tablet.json
 59959fb62ddd2234a1107a39fd066bfc0fdec6c7 assets\mccourse\models\block\fluorite_stairs_inner.json
 0096809069de7b541460be66a2734262265e6ca5 assets\mccourse\models\block\fluorite_fence_gate.json
 bace943a8327764bd96352cef8bd60a9a2a06db3 assets\mccourse\blockstates\fluorite_nether_ore.json
@@ -61,6 +62,7 @@ e30c257072f6b8c55b071291199d45ee9e0a6243 assets\mccourse\models\item\fluorite_ch
 4d6afdec82b55dffbe279fccc85e5dba189f49c3 assets\mccourse\models\block\fluorite_trapdoor_open.json
 3b812240e7fbd62ed54f2834249da83604205329 assets\mccourse\models\block\fluorite_button_pressed.json
 0ffa82912cbed12b33f221270ac40b3f419721c2 assets\mccourse\models\block\fluorite_slab.json
+23f99234f647aa805541635819a0a2a8b1552d81 assets\mccourse\models\item\metal_detector.json
 9983bb80a3099ac96a21d018fb09d81324adcb05 assets\mccourse\models\item\fluorite_axe.json
 abe15c7d33d7a8c377b79ff8a57d04d1023779be assets\mccourse\models\block\fluorite_nether_ore.json
 fb2864f902591619465af0b7095f8f2161f9a3dc assets\mccourse\blockstates\fluorite_end_ore.json
@@ -122,8 +124,8 @@ debe6f6bcb914efab78c5104e81a96d3143111b0 assets\mccourse\blockstates\fluorite_do
 d2048573e6a12d9f8d2715dd849a7b481f1a4986 assets\mccourse\models\item\fluorite_chestplate_emerald_trim.json
 0b2b0f6bff65f18b4cec2f1abfd73bd3704e4086 assets\mccourse\models\item\fluorite_leggings_diamond_trim.json
 6ab7e91db93f935b29957fae9a103407d9223711 assets\mccourse\models\item\fluorite_button.json
-20a092d5c7732f92d7fe778d3821e5a6cb677d0a assets\mccourse\blockstates\fluorite_fence_gate.json
 8db63a25fec1be3496058ee35258fc2bb443a195 assets\mccourse\blockstates\fluorite_button.json
+20a092d5c7732f92d7fe778d3821e5a6cb677d0a assets\mccourse\blockstates\fluorite_fence_gate.json
 19f74de9e26e3a7be99e6199a700223f931d2a98 assets\mccourse\models\item\fluorite_boots.json
 3f0a8b85ebd837c54134a94cb8c1866091ef26e0 assets\mccourse\blockstates\fluorite_deepslate_ore.json
 e3c5fd79e773bb83f9929c33a5b7e803d88ff9a9 assets\mccourse\models\item\fluorite_paxel.json

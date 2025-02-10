@@ -12,7 +12,7 @@ import java.util.function.UnaryOperator;
 public class ModDataComponentTypes {
 
     public static final ComponentType<BlockPos> COORDINATES = register("coordinates", builder -> builder.codec(BlockPos.CODEC));
-
+    public static final ComponentType<FoundBlockData> FOUND_BLOCK = register("found_block", builder -> builder.codec(FoundBlockData.CODEC));
 
     private static <T>ComponentType<T> register(String name, UnaryOperator<ComponentType.Builder<T>> builderUnaryOperator) {
         return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(MCCourseMod.MOD_ID, name),
