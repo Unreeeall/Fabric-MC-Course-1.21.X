@@ -1,5 +1,6 @@
 package me.unreal.mccourse;
 
+import me.unreal.mccourse.components.ModDataComponentTypes;
 import me.unreal.mccourse.item.ModItems;
 import me.unreal.mccourse.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
@@ -29,6 +30,7 @@ public class MCCourseMod implements ModInitializer {
 		registerModItems();
 		registerItemGroups();
 		registerModBlocks();
+		ModDataComponentTypes.registerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
