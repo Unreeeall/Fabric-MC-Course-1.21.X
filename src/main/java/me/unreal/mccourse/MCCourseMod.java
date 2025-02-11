@@ -1,9 +1,11 @@
 package me.unreal.mccourse;
 
 import me.unreal.mccourse.components.ModDataComponentTypes;
+import me.unreal.mccourse.event.AttackEntityHandler;
 import me.unreal.mccourse.item.ModItems;
 import me.unreal.mccourse.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
@@ -31,6 +33,8 @@ public class MCCourseMod implements ModInitializer {
 		registerItemGroups();
 		registerModBlocks();
 		ModDataComponentTypes.registerDataComponentTypes();
+
+		AttackEntityCallback.EVENT.register(new AttackEntityHandler());
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
