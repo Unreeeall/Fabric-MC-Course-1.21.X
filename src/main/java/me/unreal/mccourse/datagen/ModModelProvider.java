@@ -2,6 +2,7 @@ package me.unreal.mccourse.datagen;
 
 import me.unreal.mccourse.block.ModBlocks;
 import me.unreal.mccourse.block.custom.FluoriteLampBlock;
+import me.unreal.mccourse.block.custom.StrawberryCropBlock;
 import me.unreal.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -39,6 +40,8 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.FLUORITE_LAMP, "_on", Models.CUBE_ALL, TextureMap::all);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.FLUORITE_LAMP)
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(FluoriteLampBlock.CLICKED, lampOnIdentifier, lampOffIdentifier)));
+
+        blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3, 4, 5);
     }
 
     @Override

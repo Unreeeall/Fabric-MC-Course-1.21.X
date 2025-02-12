@@ -38,6 +38,7 @@ public class ModItemGroups {
                         entries.add(ModItems.METAL_DETECTOR);
                         entries.add(ModItems.DATA_TABLET);
                         entries.add(ModItems.KAUPEN_BOW);
+                        entries.add(ModItems.STRAWBERRY_SEEDS);
                     }).build()
     );
 

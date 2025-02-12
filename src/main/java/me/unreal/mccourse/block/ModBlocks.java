@@ -3,6 +3,7 @@ package me.unreal.mccourse.block;
 import me.unreal.mccourse.MCCourseMod;
 import me.unreal.mccourse.block.custom.FluoriteLampBlock;
 import me.unreal.mccourse.block.custom.MagicBlock;
+import me.unreal.mccourse.block.custom.StrawberryCropBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -109,6 +110,9 @@ public class ModBlocks {
                     .strength(2f).luminance(state ->state.get(FluoriteLampBlock.CLICKED) ? 15 : 0)
             ));
 
+    public static final Block STRAWBERRY_CROP =registerBlockWithoutItem("strawberry_crop",
+            new StrawberryCropBlock(AbstractBlock.Settings.copy(Blocks.WHEAT)));
+
 
 
 
@@ -130,6 +134,10 @@ public class ModBlocks {
     private static void registerBLockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));
+    }
+
+    private static Block registerBlockWithoutItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, Identifier.of(MCCourseMod.MOD_ID, name), block);
     }
 
 
