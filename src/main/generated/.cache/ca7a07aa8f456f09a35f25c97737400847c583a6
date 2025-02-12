@@ -1,4 +1,4 @@
-// 1.21	2025-02-12T17:01:56.5705643	MC Course Mod/Model Definitions
+// 1.21	2025-02-12T17:13:30.1500013	MC Course Mod/Model Definitions
 06c504730d503582befa4c61d7eff545ab48eb88 assets\mccourse\models\item\fluorite_leggings_copper_trim.json
 4cb884f732da5e08c21211f771318b34440b09c6 assets\mccourse\models\block\fluorite_door_top_left_open.json
 84d4577e7b636ea9e6a2b6bb513e557d4051a32b assets\mccourse\models\block\fluorite_stairs_outer.json
@@ -79,8 +79,8 @@ b5191abd68e279b5daffe04ca0d786e58e133a17 assets\mccourse\models\item\fluorite_le
 3309200ba5ffe491d9fe03c9e6ebfaeb1174c1c9 assets\mccourse\models\item\fluorite_boots_copper_trim.json
 082c8481cfb145454117ff145fbdf90c25e0973b assets\mccourse\blockstates\fluorite_trapdoor.json
 21dabca8f137210561856b1abab9f4e43f19070b assets\mccourse\models\block\fluorite_door_bottom_left_open.json
-45404775a7f3307dcc1b9859c05aed6550496db6 assets\mccourse\models\item\fluorite_deepslate_ore.json
 f1576a0d92bd6dddcefa45c5b355fa6c609f1c51 assets\mccourse\models\block\fluorite_button_inventory.json
+45404775a7f3307dcc1b9859c05aed6550496db6 assets\mccourse\models\item\fluorite_deepslate_ore.json
 aa08b94cad372a26eec08f78c3ad4233655109ae assets\mccourse\models\item\fluorite_helmet_diamond_trim.json
 2a1b49e72fcaf2cbd981d01c2fb5ec8be5a0fd77 assets\mccourse\models\item\fluorite_chestplate_redstone_trim.json
 db22cc136c9699563c45dea7e2328049e01965fe assets\mccourse\models\item\fluorite.json
