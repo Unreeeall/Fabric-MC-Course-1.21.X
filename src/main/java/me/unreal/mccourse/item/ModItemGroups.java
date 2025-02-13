@@ -63,6 +63,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_TRAPDOOR);
                         entries.add(ModBlocks.FLUORITE_LAMP);
                         entries.add(ModBlocks.DAHLIA);
+                        entries.add(ModBlocks.COLORED_LEAVES);
                     }).build()
     );
 

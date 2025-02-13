@@ -122,6 +122,10 @@ public class ModBlocks {
             new FlowerPotBlock(DAHLIA ,AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)
             ));
 
+    public static final Block COLORED_LEAVES = registerBlock("colored_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
+            ));
+
 
 
 
