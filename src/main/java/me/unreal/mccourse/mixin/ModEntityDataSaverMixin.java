@@ -1,12 +1,9 @@
 package me.unreal.mccourse.mixin;
 
 import me.unreal.mccourse.util.IEntityDataSaver;
-import net.minecraft.component.type.NbtComponent;
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NbtCompound;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -14,11 +11,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Entity.class)
 public abstract class ModEntityDataSaverMixin implements IEntityDataSaver {
-    @Unique
     private NbtCompound persistentData;
 
     @Override
-    public NbtCompound mC_Course_1_21_X$getPersistentData() {
+    public NbtCompound getPersistentData() {
         if(persistentData == null) {
             this.persistentData = new NbtCompound();
         }
