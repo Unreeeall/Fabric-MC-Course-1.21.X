@@ -12,11 +12,16 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.ComposterBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradedItem;
+import net.minecraft.village.VillagerProfession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,6 +52,7 @@ public class MCCourseMod implements ModInitializer {
 		registerSounds();
 		registerEffects();
 		registerPotions();
+		registerCustomTrades();
 		ModDataComponentTypes.registerDataComponentTypes();
 		CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
 		CommandRegistrationCallback.EVENT.register(ReturnHomeCommand::register);
@@ -65,5 +71,25 @@ public class MCCourseMod implements ModInitializer {
 		});
 
 		LOGGER.info("Hello Fabric world!");
+	}
+
+	private static void registerCustomTrades() {
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(ModItems.STRAWBERRY, 6), 6, 2, 0.04f
+			));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 1),
+					new ItemStack(ModItems.STRAWBERRY_SEEDS, 3), 6, 2, 0.04f
+			));
+		});
+
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 2, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 9),
+					new ItemStack(ModItems.FLUORITE_SWORD, 1), 2, 7, 0.1f
+			));
+		});
 	}
 }
