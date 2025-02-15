@@ -3,7 +3,6 @@ package me.unreal.mccourse.item;
 import me.unreal.mccourse.MCCourseMod;
 import me.unreal.mccourse.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
