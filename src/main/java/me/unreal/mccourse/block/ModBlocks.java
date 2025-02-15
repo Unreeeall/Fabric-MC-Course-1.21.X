@@ -3,6 +3,7 @@ package me.unreal.mccourse.block;
 import me.unreal.mccourse.MCCourseMod;
 import me.unreal.mccourse.block.custom.FluoriteLampBlock;
 import me.unreal.mccourse.block.custom.MagicBlock;
+import me.unreal.mccourse.block.custom.PedestalBlock;
 import me.unreal.mccourse.block.custom.StrawberryCropBlock;
 import me.unreal.mccourse.sound.ModSounds;
 import net.minecraft.block.*;
@@ -128,6 +129,12 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
             ));
 
+    public static final Block PEDESTAL = registerBlock("pedestal",
+            new PedestalBlock(AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .requiresTool()
+                    .nonOpaque()
+            ));
 
 
 
