@@ -147,8 +147,14 @@ public class ModItems {
             ));
 
     public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
-            new Item(new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).maxCount(1)));
+            new Item(new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY)
+                    .maxCount(1)
+            ));
 
+    public static final Item SPECTRE_STAFF = registerItem("spectre_staff",
+            new Item(new Item.Settings()
+                    .maxCount(1)
+            ));
 
 
 
