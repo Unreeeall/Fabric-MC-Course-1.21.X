@@ -1,10 +1,13 @@
 package me.unreal.mccourse;
 
+import me.unreal.mccourse.command.ReturnHomeCommand;
+import me.unreal.mccourse.command.SetHomeCommand;
 import me.unreal.mccourse.components.ModDataComponentTypes;
 import me.unreal.mccourse.event.AttackEntityHandler;
 import me.unreal.mccourse.item.ModItems;
 import me.unreal.mccourse.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -34,6 +37,8 @@ public class MCCourseMod implements ModInitializer {
 		registerItemGroups();
 		registerModBlocks();
 		ModDataComponentTypes.registerDataComponentTypes();
+		CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
+		CommandRegistrationCallback.EVENT.register(ReturnHomeCommand::register);
 
 		AttackEntityCallback.EVENT.register(new AttackEntityHandler());
 

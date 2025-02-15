@@ -3,7 +3,8 @@
 	"package": "me.unreal.mccourse.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"ModEntityDataSaverMixin"
 	],
 	"client": [
 		"AbstractClientPlayerEntityMixin"
