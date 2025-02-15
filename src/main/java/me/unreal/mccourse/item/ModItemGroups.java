@@ -39,6 +39,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DATA_TABLET);
                         entries.add(ModItems.KAUPEN_BOW);
                         entries.add(ModItems.STRAWBERRY_SEEDS);
+                        entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
                     }).build()
     );
 

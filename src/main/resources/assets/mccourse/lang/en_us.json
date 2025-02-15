@@ -23,6 +23,9 @@
   "item.mccourse.kaupen_bow": "Kaupen Bow",
   "item.mccourse.strawberry_seeds": "Strawberry Seeds",
 
+  "item.mccourse.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.mccourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
 
 
   "block.mccourse.fluorite_block": "Fluorite Block",
@@ -60,5 +63,8 @@
   "tooltip.mccourse.chainsaw.tooltip.1": "This is da Tree Choppa 9000!",
   "tooltip.mccourse.chainsaw.tooltip.2": "§oMake tree go gone!§r",
   "tooltip.mccourse.magic_block.tooltip.1": "§9MAGIC!!§r",
-  "tooltip.mccourse.strawberry.tooltip.1": "Yummy!!!"
+  "tooltip.mccourse.strawberry.tooltip.1": "Yummy!!!",
+
+  "sounds.mccourse.chainsaw_cut": "Chainsaw Sounds",
+  "sounds.mccourse.chainsaw_pull": "Pulling Chainsaw Sounds"
 }

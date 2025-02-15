@@ -3,6 +3,7 @@ package me.unreal.mccourse.item;
 import me.unreal.mccourse.MCCourseMod;
 import me.unreal.mccourse.block.ModBlocks;
 import me.unreal.mccourse.item.custom.*;
+import me.unreal.mccourse.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.effect.StatusEffect;
@@ -144,6 +145,9 @@ public class ModItems {
     public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds",
             new AliasedBlockItem(ModBlocks.STRAWBERRY_CROP, new Item.Settings()
             ));
+
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new Item(new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).maxCount(1)));
 
 
 
