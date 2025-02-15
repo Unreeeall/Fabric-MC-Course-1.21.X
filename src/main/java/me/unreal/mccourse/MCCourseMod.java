@@ -18,6 +18,7 @@ import org.slf4j.LoggerFactory;
 import static me.unreal.mccourse.block.ModBlocks.registerModBlocks;
 import static me.unreal.mccourse.item.ModItemGroups.registerItemGroups;
 import static me.unreal.mccourse.item.ModItems.registerModItems;
+import static me.unreal.mccourse.sound.ModSounds.registerSounds;
 
 public class MCCourseMod implements ModInitializer {
 	public static final String MOD_ID = "mccourse";
@@ -36,6 +37,7 @@ public class MCCourseMod implements ModInitializer {
 		registerModItems();
 		registerItemGroups();
 		registerModBlocks();
+		registerSounds();
 		ModDataComponentTypes.registerDataComponentTypes();
 		CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
 		CommandRegistrationCallback.EVENT.register(ReturnHomeCommand::register);
