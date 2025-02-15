@@ -4,6 +4,7 @@ import me.unreal.mccourse.MCCourseMod;
 import me.unreal.mccourse.block.custom.FluoriteLampBlock;
 import me.unreal.mccourse.block.custom.MagicBlock;
 import me.unreal.mccourse.block.custom.StrawberryCropBlock;
+import me.unreal.mccourse.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -55,6 +56,7 @@ public class ModBlocks {
             new MagicBlock(AbstractBlock.Settings.create()
                     .strength(2f)
                     .requiresTool()
+                    .sounds(ModSounds.MAGIC_BLOCK_SOUNDS)
             ));
 
     public static final Block FLUORITE_STAIRS = registerBlock("fluorite_stairs",
