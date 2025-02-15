@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static me.unreal.mccourse.block.ModBlocks.registerModBlocks;
+import static me.unreal.mccourse.effect.ModEffects.registerEffects;
 import static me.unreal.mccourse.item.ModItemGroups.registerItemGroups;
 import static me.unreal.mccourse.item.ModItems.registerModItems;
 import static me.unreal.mccourse.sound.ModSounds.registerSounds;
@@ -38,6 +39,7 @@ public class MCCourseMod implements ModInitializer {
 		registerItemGroups();
 		registerModBlocks();
 		registerSounds();
+		registerEffects();
 		ModDataComponentTypes.registerDataComponentTypes();
 		CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
 		CommandRegistrationCallback.EVENT.register(ReturnHomeCommand::register);
