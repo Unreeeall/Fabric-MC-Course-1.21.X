@@ -1,4 +1,4 @@
-// 1.21	2025-02-15T07:52:49.3704374	MC Course Mod/Model Definitions
+// 1.21	2025-02-15T20:00:30.8514998	MC Course Mod/Model Definitions
 06c504730d503582befa4c61d7eff545ab48eb88 assets\mccourse\models\item\fluorite_leggings_copper_trim.json
 4cb884f732da5e08c21211f771318b34440b09c6 assets\mccourse\models\block\fluorite_door_top_left_open.json
 84d4577e7b636ea9e6a2b6bb513e557d4051a32b assets\mccourse\models\block\fluorite_stairs_outer.json
@@ -49,8 +49,8 @@ d437bcc7c62a42eb1baa4e6a0d30c09c25453e3b assets\mccourse\models\item\fluorite_wa
 e14bd3b6409c70e48f5a4099ca46f9b4ce1b8c0d assets\mccourse\models\item\fluorite_fence_gate.json
 a394d3502d50e571e0acfe2db709f27c421c2424 assets\mccourse\blockstates\fluorite_wall.json
 711dcf6dc77dd104bed4ad8a4fd68043648f7606 assets\mccourse\models\item\fluorite_boots_gold_trim.json
-6238cedf396cc42b65a8e5a203149225b3ffd7e5 assets\mccourse\models\item\fluorite_hoe.json
 40119dd6d975ce5c7ce309b663d7c475b8ea2b64 assets\mccourse\models\item\fluorite_chestplate.json
+6238cedf396cc42b65a8e5a203149225b3ffd7e5 assets\mccourse\models\item\fluorite_hoe.json
 94d27fc8645c2c6a152d82ad68e43e621bd07b7d assets\mccourse\models\item\fluorite_boots_quartz_trim.json
 bdf92f7f7409d2b74257b9b0d0491c7d81c3bd05 assets\mccourse\models\item\fluorite_nether_ore.json
 2b329c5ab799a97ab9b72d5998c67c9443430dd4 assets\mccourse\models\block\fluorite_block.json
@@ -137,8 +137,8 @@ d2048573e6a12d9f8d2715dd849a7b481f1a4986 assets\mccourse\models\item\fluorite_ch
 29edf490a36b4a3763630af9b1f3b3ba7945f301 assets\mccourse\models\block\strawberry_crop_stage0.json
 0b2b0f6bff65f18b4cec2f1abfd73bd3704e4086 assets\mccourse\models\item\fluorite_leggings_diamond_trim.json
 6ab7e91db93f935b29957fae9a103407d9223711 assets\mccourse\models\item\fluorite_button.json
-20a092d5c7732f92d7fe778d3821e5a6cb677d0a assets\mccourse\blockstates\fluorite_fence_gate.json
 8db63a25fec1be3496058ee35258fc2bb443a195 assets\mccourse\blockstates\fluorite_button.json
+20a092d5c7732f92d7fe778d3821e5a6cb677d0a assets\mccourse\blockstates\fluorite_fence_gate.json
 bf69819f578a5b0d8c1ce2870b224a810950285b assets\mccourse\models\block\colored_leaves.json
 19f74de9e26e3a7be99e6199a700223f931d2a98 assets\mccourse\models\item\fluorite_boots.json
 3f0a8b85ebd837c54134a94cb8c1866091ef26e0 assets\mccourse\blockstates\fluorite_deepslate_ore.json

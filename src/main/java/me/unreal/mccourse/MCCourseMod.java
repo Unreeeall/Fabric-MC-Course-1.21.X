@@ -7,7 +7,7 @@ import me.unreal.mccourse.event.AttackEntityHandler;
 import me.unreal.mccourse.item.ModItems;
 import me.unreal.mccourse.potion.ModPotions;
 import me.unreal.mccourse.util.HammerUsageEvent;
-import me.unreal.mccourse.util.ModTags;
+import me.unreal.mccourse.villager.ModVillagers;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
@@ -31,6 +31,7 @@ import static me.unreal.mccourse.item.ModItemGroups.registerItemGroups;
 import static me.unreal.mccourse.item.ModItems.registerModItems;
 import static me.unreal.mccourse.potion.ModPotions.registerPotions;
 import static me.unreal.mccourse.sound.ModSounds.registerSounds;
+import static me.unreal.mccourse.villager.ModVillagers.registerVillagers;
 
 public class MCCourseMod implements ModInitializer {
 	public static final String MOD_ID = "mccourse";
@@ -53,6 +54,7 @@ public class MCCourseMod implements ModInitializer {
 		registerEffects();
 		registerPotions();
 		registerCustomTrades();
+		registerVillagers();
 		ModDataComponentTypes.registerDataComponentTypes();
 		CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
 		CommandRegistrationCallback.EVENT.register(ReturnHomeCommand::register);
@@ -89,6 +91,13 @@ public class MCCourseMod implements ModInitializer {
 			factories.add((entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 9),
 					new ItemStack(ModItems.FLUORITE_SWORD, 1), 2, 7, 0.1f
+			));
+		});
+
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.KAUPENGER, 1, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.FLUORITE, 4),
+					new ItemStack(ModItems.STARLIGHT_ASHES, 2), 6, 7, 0.1f
 			));
 		});
 	}

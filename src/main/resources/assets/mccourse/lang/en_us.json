@@ -74,5 +74,7 @@
   "tooltip.mccourse.strawberry.tooltip.1": "Yummy!!!",
 
   "sounds.mccourse.chainsaw_cut": "Chainsaw Sounds",
-  "sounds.mccourse.chainsaw_pull": "Pulling Chainsaw Sounds"
+  "sounds.mccourse.chainsaw_pull": "Pulling Chainsaw Sounds",
+
+  "entity.minecraft.villager.kaupenger": "Kaupenger"
 }
