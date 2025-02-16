@@ -27,6 +27,7 @@ import org.slf4j.LoggerFactory;
 
 import static me.unreal.mccourse.block.ModBlocks.registerModBlocks;
 import static me.unreal.mccourse.effect.ModEffects.registerEffects;
+import static me.unreal.mccourse.fluid.ModFluids.registerFluids;
 import static me.unreal.mccourse.item.ModItemGroups.registerItemGroups;
 import static me.unreal.mccourse.item.ModItems.registerModItems;
 import static me.unreal.mccourse.potion.ModPotions.registerPotions;
@@ -55,6 +56,7 @@ public class MCCourseMod implements ModInitializer {
 		registerPotions();
 		registerCustomTrades();
 		registerVillagers();
+		registerFluids();
 		ModDataComponentTypes.registerDataComponentTypes();
 		CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
 		CommandRegistrationCallback.EVENT.register(ReturnHomeCommand::register);

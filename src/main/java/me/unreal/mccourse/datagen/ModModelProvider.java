@@ -3,6 +3,7 @@ package me.unreal.mccourse.datagen;
 import me.unreal.mccourse.block.ModBlocks;
 import me.unreal.mccourse.block.custom.FluoriteLampBlock;
 import me.unreal.mccourse.block.custom.StrawberryCropBlock;
+import me.unreal.mccourse.fluid.ModFluids;
 import me.unreal.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -75,5 +76,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.METAL_DETECTOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
+        itemModelGenerator.register(ModFluids.FLUORITE_WATER_BUCKET, Models.GENERATED);
     }
 }

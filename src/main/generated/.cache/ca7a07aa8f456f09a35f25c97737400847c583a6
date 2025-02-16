@@ -1,4 +1,4 @@
-// 1.21	2025-02-15T20:00:30.8514998	MC Course Mod/Model Definitions
+// 1.21	2025-02-16T06:56:59.9527654	MC Course Mod/Model Definitions
 06c504730d503582befa4c61d7eff545ab48eb88 assets\mccourse\models\item\fluorite_leggings_copper_trim.json
 4cb884f732da5e08c21211f771318b34440b09c6 assets\mccourse\models\block\fluorite_door_top_left_open.json
 84d4577e7b636ea9e6a2b6bb513e557d4051a32b assets\mccourse\models\block\fluorite_stairs_outer.json
@@ -45,6 +45,7 @@ f2aeca2040ea829b8b6878ebe3a168fcb74381d2 assets\mccourse\models\item\chainsaw.js
 fac5d28dfafaf4ed309fe8f9bd7013d25ee2114a assets\mccourse\blockstates\fluorite_slab.json
 26dd52443a272238777ae190636a7b25a8ebe4b7 assets\mccourse\models\block\strawberry_crop_stage4.json
 d437bcc7c62a42eb1baa4e6a0d30c09c25453e3b assets\mccourse\models\item\fluorite_wall.json
+ccfc16cc068ba02ef66e4648cf91e8b6b5ca5699 assets\mccourse\models\item\fluorite_water_bucket.json
 55ab8e449ff54e09f2541821e53089546fa9eef9 assets\mccourse\models\block\fluorite_fence_gate_wall.json
 e14bd3b6409c70e48f5a4099ca46f9b4ce1b8c0d assets\mccourse\models\item\fluorite_fence_gate.json
 a394d3502d50e571e0acfe2db709f27c421c2424 assets\mccourse\blockstates\fluorite_wall.json
