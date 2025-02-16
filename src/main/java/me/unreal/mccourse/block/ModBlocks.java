@@ -1,10 +1,7 @@
 package me.unreal.mccourse.block;
 
 import me.unreal.mccourse.MCCourseMod;
-import me.unreal.mccourse.block.custom.FluoriteLampBlock;
-import me.unreal.mccourse.block.custom.MagicBlock;
-import me.unreal.mccourse.block.custom.PedestalBlock;
-import me.unreal.mccourse.block.custom.StrawberryCropBlock;
+import me.unreal.mccourse.block.custom.*;
 import me.unreal.mccourse.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
@@ -136,6 +133,11 @@ public class ModBlocks {
                     .nonOpaque()
             ));
 
+    public static final Block CRYSTALLIZER = registerBlock("crystallizer",
+            new CrystallizerBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .requiresTool()
+            ));
 
 
 
