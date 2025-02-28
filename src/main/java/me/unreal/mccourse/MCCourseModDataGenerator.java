@@ -1,6 +1,7 @@
 package me.unreal.mccourse;
 
 import me.unreal.mccourse.datagen.*;
+import me.unreal.mccourse.enchantment.ModEnchantments;
 import me.unreal.mccourse.trim.ModTrimMaterials;
 import me.unreal.mccourse.trim.ModTrimPatterns;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -27,5 +28,6 @@ public class MCCourseModDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
 	}
 }
