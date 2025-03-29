@@ -71,7 +71,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 BlockTags.INCORRECT_FOR_WOODEN_TOOL)
                 .addTag(ModTags.Blocks.NEEDS_FLUORITE_TOOL);
 
-
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.BLACKWOOD_LOG, ModBlocks.STRIPPED_BLACKWOOD_LOG, ModBlocks.BLACKWOOD_WOOD, ModBlocks.STRIPPED_BLACKWOOD_WOOD);
     }
 
 }

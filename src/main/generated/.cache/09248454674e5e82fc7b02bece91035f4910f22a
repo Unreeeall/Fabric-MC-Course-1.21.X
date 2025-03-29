@@ -1,5 +1,7 @@
-// 1.21	2025-02-28T13:15:53.2557592	MC Course Mod/Tags for minecraft:item
+// 1.21	2025-03-29T15:46:50.2830961	MC Course Mod/Tags for minecraft:item
 f47b9f1d92280907d6167a544a50c41c1fce1788 data\minecraft\tags\item\trim_materials.json
+a824aa6cb027a271750dca44fec8249c12185a72 data\minecraft\tags\item\planks.json
 4aaac5bdb81bd178999a9f62ae00f043edbfa2fe data\mccourse\tags\item\transformable_items.json
+3c69d096a24e05bb84186c99cd8cccd21968ba76 data\minecraft\tags\item\logs_that_burn.json
 4604a2436b1811e8f84815fe50ec8cf9deaa453a data\minecraft\tags\item\trim_templates.json
 39767b6cbff598797ba651948a4667315c10a861 data\minecraft\tags\item\trimmable_armor.json
