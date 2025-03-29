@@ -34,6 +34,7 @@ import static me.unreal.mccourse.item.ModItems.registerModItems;
 import static me.unreal.mccourse.potion.ModPotions.registerPotions;
 import static me.unreal.mccourse.sound.ModSounds.registerSounds;
 import static me.unreal.mccourse.villager.ModVillagers.registerVillagers;
+import static me.unreal.mccourse.world.gen.ModWorldGeneration.generateModWorldGeneration;
 
 public class MCCourseMod implements ModInitializer {
 	public static final String MOD_ID = "mccourse";
@@ -59,6 +60,8 @@ public class MCCourseMod implements ModInitializer {
 		registerVillagers();
 		registerFluids();
 		registerEnchantmentEffects();
+		generateModWorldGeneration();
+
 		ModDataComponentTypes.registerDataComponentTypes();
 		CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
 		CommandRegistrationCallback.EVENT.register(ReturnHomeCommand::register);

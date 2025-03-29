@@ -4,6 +4,8 @@ import me.unreal.mccourse.datagen.*;
 import me.unreal.mccourse.enchantment.ModEnchantments;
 import me.unreal.mccourse.trim.ModTrimMaterials;
 import me.unreal.mccourse.trim.ModTrimPatterns;
+import me.unreal.mccourse.world.ModConfiguredFeatures;
+import me.unreal.mccourse.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -22,6 +24,7 @@ public class MCCourseModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRegistryDataGenerator::new);
 		pack.addProvider(ModPoiTagProvider::new);
 		pack.addProvider(ModFluidTagProvider::new);
+		pack.addProvider(ModWorldGenerator::new);
 	}
 
 	@Override
@@ -29,5 +32,7 @@ public class MCCourseModDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }
