@@ -1,3 +1,9 @@
-// 1.21	2025-03-29T15:46:50.2820969	MC Course Mod/World Gen
+// 1.21	2025-03-30T09:54:05.9455521	MC Course Mod/World Gen
 77253f1ae63e8d4f57cef5bcf96fb3a5fb798044 data\mccourse\worldgen\placed_feature\blackwood_placed.json
+12c9c3b4ac589c0d62e186eb9eb370cc4f3d1317 data\mccourse\worldgen\placed_feature\end_fluorite_ore_placed.json
+61e3d731e7b1e5bf96f2d0bbcfefe788e384444a data\mccourse\worldgen\configured_feature\end_fluorite_ore.json
+41bed4d57487cc5a8a1530638ca43ac4c242de0b data\mccourse\worldgen\configured_feature\fluorite_ore.json
 68d79de3cc4a8ea856673403ac8a7c020a1bab6e data\mccourse\worldgen\configured_feature\blackwood.json
+d0e7fe1000fb832b522be55549fb6b8200517fb9 data\mccourse\worldgen\placed_feature\fluorite_ore_placed.json
+42ee44f03b6b3e0581ff6678ebf91c641831e839 data\mccourse\worldgen\placed_feature\nether_fluorite_ore_placed.json
+0cef2494be19813da330dd12062a99d9b612935e data\mccourse\worldgen\configured_feature\nether_fluorite_ore.json
