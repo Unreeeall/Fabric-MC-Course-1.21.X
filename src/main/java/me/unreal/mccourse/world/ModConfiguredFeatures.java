@@ -28,6 +28,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_FLUORITE_ORE_KEY = registerKey("nether_fluorite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_FLUORITE_ORE_KEY = registerKey("end_fluorite_ore");
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DAHLIA_KEY = registerKey("dahlia");
+
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context){
         register(context, BLACKWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
@@ -59,6 +61,8 @@ public class ModConfiguredFeatures {
         register(context, NETHER_FLUORITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherFluoriteOres,9));
         register(context, END_FLUORITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endFluoriteOres,8));
 
+        register(context, DAHLIA_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(32, 6, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.DAHLIA)))));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
