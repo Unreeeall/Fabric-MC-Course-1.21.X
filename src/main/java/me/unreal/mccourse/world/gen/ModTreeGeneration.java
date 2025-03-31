@@ -8,7 +8,7 @@ import net.minecraft.world.gen.GenerationStep;
 
 public class ModTreeGeneration {
     public static void generateTrees(){
-        BiomeModifications.addFeature(BiomeSelectors.excludeByKey(BiomeKeys.PLAINS, BiomeKeys.TAIGA),
+        BiomeModifications.addFeature(BiomeSelectors.excludeByKey(BiomeKeys.PLAINS, BiomeKeys.TAIGA, BiomeKeys.STONY_SHORE),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLACKWOOD_PLACED_KEY);
     }
 

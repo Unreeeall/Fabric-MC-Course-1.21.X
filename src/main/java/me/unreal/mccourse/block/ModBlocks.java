@@ -14,7 +14,13 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class ModBlocks {
+
+    private static final List<Block> BLACKWOOD_PLANTABLE = Arrays.asList(Blocks.DIRT, Blocks.GRASS_BLOCK, Blocks.STONE);
 
     public static final Block FLUORITE_BLOCK = registerBlock("fluorite_block",
             new Block(AbstractBlock.Settings.create()
@@ -160,8 +166,7 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block BLACKWOOD_SAPLING = registerBlock("blackwood_sapling",
-            new SaplingBlock(ModSaplingGenerators.BLACKWOOD ,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
-
+            new ModSaplingBlock(ModSaplingGenerators.BLACKWOOD ,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING), BLACKWOOD_PLANTABLE));
 
 
 
