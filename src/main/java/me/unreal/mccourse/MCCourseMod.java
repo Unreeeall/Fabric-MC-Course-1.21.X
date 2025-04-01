@@ -29,6 +29,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static me.unreal.mccourse.block.ModBlocks.registerModBlocks;
+import static me.unreal.mccourse.block.entity.ModBlockEntities.registerBlockEntities;
 import static me.unreal.mccourse.effect.ModEffects.registerEffects;
 import static me.unreal.mccourse.enchantment.ModEnchantmentEffects.registerEnchantmentEffects;
 import static me.unreal.mccourse.fluid.ModFluids.registerFluids;
@@ -66,6 +67,7 @@ public class MCCourseMod implements ModInitializer {
 		registerStrippables();
 		registerEnchantmentEffects();
 		generateModWorldGeneration();
+		registerBlockEntities();
 
 		ModDataComponentTypes.registerDataComponentTypes();
 		CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
