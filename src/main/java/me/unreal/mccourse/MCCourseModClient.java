@@ -1,6 +1,8 @@
 package me.unreal.mccourse;
 
 import me.unreal.mccourse.block.ModBlocks;
+import me.unreal.mccourse.block.entity.ModBlockEntities;
+import me.unreal.mccourse.block.entity.renderer.PedestalBlockEntityRenderer;
 import me.unreal.mccourse.fluid.ModFluids;
 import me.unreal.mccourse.util.ModModelPredicates;
 import net.fabricmc.api.ClientModInitializer;
@@ -10,6 +12,8 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.world.biome.FoliageColors;
 
 public class MCCourseModClient  implements ClientModInitializer {
@@ -33,5 +37,7 @@ public class MCCourseModClient  implements ClientModInitializer {
                 SimpleFluidRenderHandler.coloredWater(0xA1E038D0));
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
                 ModFluids.STILL_FLUORITE_WATER, ModFluids.FLOWING_FLUORITE_WATER);
+
+        BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE, PedestalBlockEntityRenderer::new);
     }
 }
