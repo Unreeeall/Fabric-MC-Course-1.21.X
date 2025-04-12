@@ -97,5 +97,7 @@
   "sounds.mccourse.chainsaw_cut": "Chainsaw Sounds",
   "sounds.mccourse.chainsaw_pull": "Pulling Chainsaw Sounds",
 
-  "entity.minecraft.villager.kaupenger": "Kaupenger"
+  "entity.minecraft.villager.kaupenger": "Kaupenger",
+
+  "gui.mccourse.pedestal": "Pedestal"
 }
