@@ -4,7 +4,8 @@ import me.unreal.mccourse.block.ModBlocks;
 import me.unreal.mccourse.block.entity.ModBlockEntities;
 import me.unreal.mccourse.block.entity.renderer.PedestalBlockEntityRenderer;
 import me.unreal.mccourse.fluid.ModFluids;
-import me.unreal.mccourse.screen.custom.ModScreenHandlers;
+import me.unreal.mccourse.screen.ModScreenHandlers;
+import me.unreal.mccourse.screen.custom.CrystallizerScreen;
 import me.unreal.mccourse.screen.custom.PedestalScreen;
 import me.unreal.mccourse.util.ModModelPredicates;
 import net.fabricmc.api.ClientModInitializer;
@@ -13,11 +14,9 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.world.biome.FoliageColors;
 
 public class MCCourseModClient  implements ClientModInitializer {
@@ -46,5 +45,6 @@ public class MCCourseModClient  implements ClientModInitializer {
 
 
         HandledScreens.register(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, PedestalScreen::new);
+        HandledScreens.register(ModScreenHandlers.CRYSTALLIZER_SCREEN_HANDLER, CrystallizerScreen::new);
     }
 }
