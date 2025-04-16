@@ -14,22 +14,21 @@ import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
 
 public class CrystallizerScreenHandler extends ScreenHandler {
-
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-    private final CrystallizerBlockEntity blockEntity;
+    public final CrystallizerBlockEntity blockEntity;
 
     public CrystallizerScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));
     }
 
-    public CrystallizerScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
+    public CrystallizerScreenHandler(int syncId, PlayerInventory playerInventory,
+                                     BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
         super(ModScreenHandlers.CRYSTALLIZER_SCREEN_HANDLER, syncId);
         checkSize((Inventory) blockEntity, 4);
         this.inventory = (Inventory) blockEntity;
         this.propertyDelegate = arrayPropertyDelegate;
-        this.blockEntity = (CrystallizerBlockEntity) blockEntity;
-
+        this.blockEntity = ((CrystallizerBlockEntity) blockEntity);
 
         this.addSlot(new Slot(inventory, 0, 8, 62));
         this.addSlot(new Slot(inventory, 1, 54, 34));
@@ -41,7 +40,6 @@ public class CrystallizerScreenHandler extends ScreenHandler {
 
         addProperties(arrayPropertyDelegate);
     }
-
 
     public boolean isCrafting() {
         return propertyDelegate.get(0) > 0;
@@ -62,7 +60,6 @@ public class CrystallizerScreenHandler extends ScreenHandler {
 
         return maxProgress != 0 && progress != 0 ? progress * crystalPixelSize / maxProgress : 0;
     }
-
 
     @Override
     public ItemStack quickMove(PlayerEntity player, int invSlot) {

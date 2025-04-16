@@ -17,7 +17,6 @@ public class CrystallizerScreen extends HandledScreen<CrystallizerScreenHandler>
     private static final Identifier CRYSTAL_TEXTURE =
             Identifier.of("textures/block/amethyst_cluster.png");
 
-
     public CrystallizerScreen(CrystallizerScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
@@ -26,6 +25,7 @@ public class CrystallizerScreen extends HandledScreen<CrystallizerScreenHandler>
     protected void init() {
         super.init();
 
+        // Get rid of title and inventory title
         titleY = 1000;
         playerInventoryTitleY = 1000;
     }
@@ -44,18 +44,18 @@ public class CrystallizerScreen extends HandledScreen<CrystallizerScreenHandler>
         renderProgressCrystal(context, x, y);
     }
 
-    private void renderProgressCrystal(DrawContext context, int x, int y) {
+    private void renderProgressArrow(DrawContext context, int x, int y) {
         if(handler.isCrafting()) {
-            context.drawTexture(CRYSTAL_TEXTURE, x + 104, y + 13 + 16 - handler.getScaledCrystalProgress(), 0,
-                    16 - handler.getScaledCrystalProgress(), 16, handler.getScaledCrystalProgress(), 16, 16);
+            context.drawTexture(ARROW_TEXTURE, x + 73, y + 35, 0, 0,
+                    handler.getScaledArrowProgress(), 16, 24, 16);
         }
     }
 
-    private void renderProgressArrow(DrawContext context, int x, int y) {
+    private void renderProgressCrystal(DrawContext context, int x, int y) {
         if(handler.isCrafting()) {// Texture | positioning coordinates
-            context.drawTexture(ARROW_TEXTURE, x + 73, y + 35, 0, 0,
+            context.drawTexture(CRYSTAL_TEXTURE,x + 104, y + 13 + 16 - handler.getScaledCrystalProgress(), 0,
+                    16 - handler.getScaledCrystalProgress(), 16, handler.getScaledCrystalProgress(),16, 16);
                     // pixels of texture width to draw | pixels of texture height to draw | texture width | texture height
-                    handler.getScaledArrowProgress(), 16, 24, 16);
         }
     }
 

@@ -12,6 +12,8 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.Direction;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 /**
  * A simple {@code SidedInventory} implementation with only default methods + an item list getter.
  *

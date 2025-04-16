@@ -28,27 +28,24 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, IImplementedInventory {
-
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
 
-    public static final int FLUID_ITEM_SLOT = 0;
-    public static final int INPUT_ITEM_SLOT = 1;
-    public static final int OUTPUT_ITEM_SLOT = 2;
-    public static final int ENERGY_ITEM_SLOT = 3;
-
+    private static final int FLUID_ITEM_SLOT = 0;
+    private static final int INPUT_SLOT = 1;
+    private static final int OUTPUT_SLOT = 2;
+    private static final int ENERGY_ITEM_SLOT = 3;
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 72;
     private final int DEFAULT_MAX_PROGRESS = 72;
 
-
     public CrystallizerBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.CRYSTALLIZER_BE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
-                return switch (index){
+                return switch (index) {
                     case 0 -> CrystallizerBlockEntity.this.progress;
                     case 1 -> CrystallizerBlockEntity.this.maxProgress;
                     default -> 0;
@@ -71,13 +68,13 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
     }
 
     @Override
-    public DefaultedList<ItemStack> getItems() {
-        return inventory;
+    public BlockPos getScreenOpeningData(ServerPlayerEntity player) {
+        return this.pos;
     }
 
     @Override
-    public BlockPos getScreenOpeningData(ServerPlayerEntity serverPlayerEntity) {
-        return this.pos;
+    public DefaultedList<ItemStack> getItems() {
+        return inventory;
     }
 
     @Override
@@ -85,8 +82,9 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
         return Text.translatable("gui.mccourse.crystallizer");
     }
 
+    @Nullable
     @Override
-    public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
+    public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
         return new CrystallizerScreenHandler(syncId, playerInventory, this, propertyDelegate);
     }
 
@@ -95,12 +93,14 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
         super.writeNbt(nbt, registryLookup);
         Inventories.writeNbt(nbt, inventory, registryLookup);
         nbt.putInt("crystallizer.progress", progress);
+        nbt.putInt("crystallizer.max_progress", maxProgress);
     }
 
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         Inventories.readNbt(nbt, inventory, registryLookup);
         progress = nbt.getInt("crystallizer.progress");
+        maxProgress = nbt.getInt("crystallizer.max_progress");
         super.readNbt(nbt, registryLookup);
     }
 
@@ -112,7 +112,6 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
             if(hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
-
             }
         } else {
             resetProgress();
@@ -125,8 +124,8 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
     }
 
     private void craftItem() {
-        this.removeStack(INPUT_ITEM_SLOT, 1);
-        this.setStack(OUTPUT_ITEM_SLOT, new ItemStack(ModItems.FLUORITE, this.getStack(OUTPUT_ITEM_SLOT).getCount() + 1));
+        this.removeStack(INPUT_SLOT, 1);
+        this.setStack(OUTPUT_SLOT, new ItemStack(ModItems.FLUORITE, this.getStack(OUTPUT_SLOT).getCount() + 1));
     }
 
     private boolean hasCraftingFinished() {
@@ -138,27 +137,30 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
     }
 
     private boolean canInsertIntoOutputSlot() {
-        return this.getStack(OUTPUT_ITEM_SLOT).isEmpty() || this.getStack(OUTPUT_ITEM_SLOT).getCount() < this.getStack(OUTPUT_ITEM_SLOT).getMaxCount();
+        return this.getStack(OUTPUT_SLOT).isEmpty() ||
+                this.getStack(OUTPUT_SLOT).getCount() < this.getStack(OUTPUT_SLOT).getMaxCount();
     }
 
     private boolean hasRecipe() {
         ItemStack input = new ItemStack(ModItems.RAW_FLUORITE);
-        ItemStack output = new ItemStack(ModItems.FLUORITE, 6);
-        
-        return this.getStack(INPUT_ITEM_SLOT).getItem() == input.getItem() && canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        ItemStack output = new ItemStack(ModItems.FLUORITE);
+
+        return this.getStack(INPUT_SLOT).getItem() == input.getItem() &&
+                canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
-        return this.getStack(OUTPUT_ITEM_SLOT).isEmpty() || this.getStack(OUTPUT_ITEM_SLOT).getItem() == output.getItem();
+        return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getItem() == output.getItem();
     }
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
-        return this.getStack(OUTPUT_ITEM_SLOT).getMaxCount() >= this.getStack(OUTPUT_ITEM_SLOT).getCount() + count;
+        return this.getStack(OUTPUT_SLOT).getMaxCount() >= this.getStack(OUTPUT_SLOT).getCount() + count;
     }
 
 
+    @Nullable
     @Override
-    public @Nullable Packet<ClientPlayPacketListener> toUpdatePacket() {
+    public Packet<ClientPlayPacketListener> toUpdatePacket() {
         return BlockEntityUpdateS2CPacket.create(this);
     }
 }
