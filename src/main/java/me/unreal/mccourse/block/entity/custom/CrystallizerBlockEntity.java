@@ -1,5 +1,6 @@
 package me.unreal.mccourse.block.entity.custom;
 
+import me.unreal.mccourse.block.custom.CrystallizerBlock;
 import me.unreal.mccourse.block.entity.IImplementedInventory;
 import me.unreal.mccourse.block.entity.ModBlockEntities;
 import me.unreal.mccourse.item.ModItems;
@@ -107,6 +108,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
     public void tick(World world, BlockPos pos, BlockState state) {
         if(hasRecipe() && canInsertIntoOutputSlot()) {
             increaseCraftingProgress();
+            world.setBlockState(pos, state.with(CrystallizerBlock.LIT, true));
             markDirty(world, pos, state);
 
             if(hasCraftingFinished()) {
@@ -114,6 +116,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
                 resetProgress();
             }
         } else {
+            world.setBlockState(pos, state.with(CrystallizerBlock.LIT, false));
             resetProgress();
         }
     }

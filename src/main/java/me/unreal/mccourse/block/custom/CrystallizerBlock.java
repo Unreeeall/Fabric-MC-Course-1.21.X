@@ -14,18 +14,23 @@ import net.minecraft.item.Items;
 import net.minecraft.particle.ItemStackParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class CrystallizerBlock extends BlockWithEntity {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final BooleanProperty LIT = Properties.LIT;
     public static final MapCodec<CrystallizerBlock> CODEC = createCodec(CrystallizerBlock::new);
 
     public CrystallizerBlock(Settings settings) {
@@ -57,26 +62,10 @@ public class CrystallizerBlock extends BlockWithEntity {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, LIT);
     }
 
     /* BLOCK ENTITY */
-
-    @Override
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        // CLient Only but should be Seen by other players
-
-        double xPos = pos.getX() + 0.5f;
-        double yPos = pos.getY() + 1.25f;
-        double zPos = pos.getZ() + 0.5f;
-        double offset = random.nextDouble() * 0.6 - 0.3;
-
-        world.addParticle(ParticleTypes.SMOKE, xPos + offset, yPos, zPos + offset, 0.0, 0.0, 0.0);
-        world.addParticle(new ItemStackParticleEffect(ParticleTypes.ITEM, Items.COOKED_BEEF.getDefaultStack()),
-                xPos + offset, yPos, zPos + offset, 0.0, 0.0, 0.0);
-
-
-    }
 
     @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
@@ -116,5 +105,36 @@ public class CrystallizerBlock extends BlockWithEntity {
     @Override
     protected BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
+    }
+
+    /* LIT */
+
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        if (!state.get(LIT)) {
+            return;
+        }
+
+        double xPos = (double)pos.getX() + 0.5;
+        double yPos = pos.getY();
+        double zPos = (double)pos.getZ() + 0.5;
+        if (random.nextDouble() < 0.15) {
+            world.playSound(xPos, yPos, zPos, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.BLOCKS, 1.0f, 1.0f, false);
+        }
+
+        Direction direction = state.get(FACING);
+        Direction.Axis axis = direction.getAxis();
+
+        double defaultOffset = random.nextDouble() * 0.6 - 0.3;
+        double xOffsets = axis == Direction.Axis.X ? (double)direction.getOffsetX() * 0.52 : defaultOffset;
+        double yOffset = random.nextDouble() * 6.0 / 8.0;
+        double zOffset = axis == Direction.Axis.Z ? (double)direction.getOffsetZ() * 0.52 : defaultOffset;
+
+        world.addParticle(ParticleTypes.SMOKE, xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
+
+        if(world.getBlockEntity(pos) instanceof CrystallizerBlockEntity crystallizerBlockEntity && !crystallizerBlockEntity.getStack(1).isEmpty()) {
+            world.addParticle(new ItemStackParticleEffect(ParticleTypes.ITEM, crystallizerBlockEntity.getStack(1)),
+                    xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
+        }
     }
 }
