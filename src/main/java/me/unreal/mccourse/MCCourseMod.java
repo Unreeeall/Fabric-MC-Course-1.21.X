@@ -7,6 +7,7 @@ import me.unreal.mccourse.components.ModDataComponentTypes;
 import me.unreal.mccourse.event.AttackEntityHandler;
 import me.unreal.mccourse.item.ModItems;
 import me.unreal.mccourse.potion.ModPotions;
+import me.unreal.mccourse.recipe.ModRecipes;
 import me.unreal.mccourse.util.HammerUsageEvent;
 import me.unreal.mccourse.villager.ModVillagers;
 import net.fabricmc.api.ModInitializer;
@@ -36,6 +37,7 @@ import static me.unreal.mccourse.fluid.ModFluids.registerFluids;
 import static me.unreal.mccourse.item.ModItemGroups.registerItemGroups;
 import static me.unreal.mccourse.item.ModItems.registerModItems;
 import static me.unreal.mccourse.potion.ModPotions.registerPotions;
+import static me.unreal.mccourse.recipe.ModRecipes.registerRecipes;
 import static me.unreal.mccourse.sound.ModSounds.registerSounds;
 import static me.unreal.mccourse.villager.ModVillagers.registerVillagers;
 import static me.unreal.mccourse.world.gen.ModWorldGeneration.generateModWorldGeneration;
@@ -68,6 +70,7 @@ public class MCCourseMod implements ModInitializer {
 		registerEnchantmentEffects();
 		generateModWorldGeneration();
 		registerBlockEntities();
+		registerRecipes();
 
 		ModDataComponentTypes.registerDataComponentTypes();
 		CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
