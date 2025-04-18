@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"me.unreal.mccourse.MCCourseModClient"
+		],
+		"rei_client": [
+			"me.unreal.mccourse.compat.MCCourseModREIClient"
 		]
 	},
 	"mixins": [
